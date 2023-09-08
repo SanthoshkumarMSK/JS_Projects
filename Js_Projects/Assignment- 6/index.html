@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>User Management</title>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link rel="stylesheet" href="/Css/style.css">
+    
+
+</head>
+
+<body>
+
+    <h1>Employee Data
+      
+            <span> <button id="adduser" onclick="adduser()" ><box-icon type='solid' name='book-add'></box-icon></button> </th> </span> 
+        
+    </h1>
+
+    <table id="viewUsers" onload="fetchUsers()">
+
+        <thead>
+
+            <tr>
+
+                <th>Name</th>
+                
+                <th>Age</th>
+
+                <th>State</th>
+
+                <th> Functions</th> 
+                
+               
+                <tr>
+                 <td> ${userName} </td>
+                 <td> ${age} </td>
+                 <td> ${state} </td>
+                <td> <button id="editUser" onclick="updateUser()"> <box-icon name='edit-alt' type='solid' ></box-icon></button>  <button id="deleteUser" onclick="deleteUser()"> <box-icon type='solid' name='message-alt-x'></box-icon> </button> </td>
+                </tr>
+                
+
+            </tr>
+
+        </thead>
+
+     <tbody id="empData"></tbody>
+    </table>
+    <script src="/js/script.js"></script>
+</body>
+</html>

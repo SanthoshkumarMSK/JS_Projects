@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/basic.css" />
+    <script src="https://kit.fontawesome.com/cee2a3a2b0.js" crossorigin="anonymous"></script>
+    <title>Exercies1</title>
+  </head>
+  <body>
+    <div class="application">
+      <div class="top">
+        <div class="main-title">job application form</div>
+        <div class="sub-title">
+          please fill out the form below to submit your job application
+        </div>
+      </div>
+      <div class="middle">
+        <div class="input-group padding-40b">
+          <div class="input-field">
+            <label class="first requried" for="firstName">Name</label>
+            <div class="wrapper">
+            <input type="text" id="firstName" />
+            <i class="fa-sharp fa-solid fa-circle-check checked-input" for-input="firstName"></i>
+            </div>
+            <label class="last"  for="firstName">First Name</label>
+            <div class="hidden-text" for-input="firstName">
+              <i class="fa-solid fa-circle-exclamation"></i>
+              <span onclick="validatefirstName()">Please enter your Firstname</span>
+            </div>
+          </div>
+          <div class="input-field">
+            <label class="first hide" for="lastName">Name</label>
+            <div class="wrapper">
+            <input type="text" id="lastName" />
+            <i class="fa-sharp fa-solid fa-circle-check checked-input" for-input="lastName"></i>
+            </div>
+            <label class="last" for="lastName">Last Name</label>
+            <div class="hidden-text" for-input="lastName">
+              <i class="fa-solid fa-circle-exclamation"></i>
+              <span>Please enter your Lastname</span>
+            </div>
+          </div>
+        </div>
+        <div class="input-group padding-40b">
+          <div class="input-field">
+            <label class="first requried" for="eMail">E-mail</label>
+            <div class="wrapper">
+            <input type="text" id="eMail" placeholder="ex:myname@example.com" />
+            <i class="fa-sharp fa-solid fa-circle-check checked-input" for-input="eMail"></i>  
+          </div>
+            <label class="last" for="eMail">example@example.com</label>
+            <div class="hidden-text" for-input="eMail">
+              <i class="fa-solid fa-circle-exclamation"></i>
+              <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, sint?</span>
+            </div>
+          </div>
+          <div class="input-field">
+            <label class="first requried" for="phoneNumber">Phone Number</label>
+            <div class="wrapper">
+            <input
+              type="text"
+              id="phoneNumber"
+              placeholder="000-000-0000"
+              maxlength="10"
+            />
+            <i class="fa-sharp fa-solid fa-circle-check checked-input" for-input="phoneNumber"></i>
+            </div>
+            <label class="last hide" >hidden text</label>
+            <div class="hidden-text" for-input="phoneNumber">
+              <i class="fa-solid fa-circle-exclamation"></i>
+              <span>Please enter your Phone Number</span>
+            </div>
+          </div>
+        </div>
+        <div class="radio padding-40b">
+          <label class="first" for="gender">Gender</label>
+          <div class="radio-wrap">
+            <input type="radio" name="gender" id="male" value="male" />Male
+            <br />
+            <input
+              type="radio"
+              name="gender"
+              id="female"
+              value="female"
+            />Female <br />
+            <input
+              type="radio"
+              name="gender"
+              id="transgender"
+              value="transgender"
+            />Transgender
+          </div>
+        </div>
+        <div class="current-city padding-40b">
+          <label class="first" for="currentCity">Current City</label>
+          <select name="currentCity" id="currentCity">
+            <option value="">Please Select</option>
+            <option value="Hyderabad">Hyderabad</option>
+            <option value="Andhra Pradesh">Andhra Pradesh</option>
+          </select>
+        </div>
+        <div class="input-group padding-40b">
+          <div class="input-field">
+            <label class="first requried" for="appliedPosition">Applied Position</label>
+            <div class="wrapper">
+            <input type="text" name="appliedPositon" id="appliedPosition" />
+            <i class="fa-sharp fa-solid fa-circle-check checked-input" for-input="appliedPosition"></i>
+            </div>
+            <label class="last hide" >hidden text</label>
+            <div class="hidden-text" for-input="appliedPosition">
+              <i class="fa-solid fa-circle-exclamation"></i>
+              <span>Please select Gender</span>
+            </div>
+          </div>
+          <div class="input-field">
+            <label class="first" for="poss-start-date"
+              >Earliest Possiable start Date</label
+            >
+            <input type="date" name="poss-start-date" id="poss-start-date" />
+            <label class="last" for="poss-start-date">Date</label>
+            
+          </div>
+        </div>
+        <label class="fi-first" for="pref-date">Prederred Interview Date</label>
+        <div class="pref-date margin-7t padding-40b">
+          <div class="set-date">
+            <div class="current-date">
+              <input type="text" id="dateandtime" readonly value="3/7/2023" />
+              <i class="fa-solid fa-calendar-days"></i>
+            </div>
+            <div class="month-year">
+              <div class="month">
+                <select name="month" id="set-month">
+                  <option id="monthvalue"></option>
+                </select>
+                <div class="prenxt" for-change="months">
+                  <i class="fa-solid fa-angle-up" id="up"></i>
+                  <i class="fa-solid fa-angle-down" id="down"></i>
+                </div>
+              </div>
+              <div class="year">
+                <select name="year" id="set-year">
+                  <option id="yearvalue"></option>
+                </select>
+                <div class="prenxt" for-change="years">
+                  <i class="fa-solid fa-angle-up" id="up"></i>
+                  <i class="fa-solid fa-angle-down" id="down"></i>
+                </div>
+              </div>
+            </div>
+            <div class="calender">
+              <ul class="weeks">
+                <li>Sun</li>
+                <li>Mon</li>
+                <li>Tue</li>
+                <li>Wed</li>
+                <li>Thu</li>
+                <li>Fri</li>
+                <li>Sat</li>
+              </ul>
+              <ul class="days">
+              </ul>
+            </div>
+          </div>
+          <div class="set-time">
+            <div class="selected-date">
+              <div class="selected-date-title">
+                <label class="fi-first day-month-date">Monday, March 27</label>
+                <div class="prenxt-hor" for-change="dates">
+                  <i class="fa-solid fa-angle-left" id="left"></i>
+                  <i class="fa-solid fa-angle-right" id="right"></i>
+                </div>
+              </div>
+              <div class="timings">
+                <div class="set-timings">11:30 AM</div>
+                <div class="set-timings">12:30 PM</div>
+                <div class="set-timings">01:30 PM</div>
+                <div class="set-timings">02:30 PM</div>
+                <div class="set-timings">03:30 PM</div>
+                <div class="set-timings">04:30 PM</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="upload-resume padding-40b">
+          <label class="fi-first">Upload Resume</label>
+          <div class="drop-box margin-7t">
+            <i class="fa-sharp fa-solid fa-cloud-arrow-up"></i>
+            <h2 class="input-file">Upload a File</h2>
+            <h3>Drag and drop files here</h3>
+          </div>
+        </div>
+      </div>
+      <div class="bottom">
+        <button type="button" id="apply" onclick="apply()">Apply</button>
+        <button type="button" id="reset">Reset</button>
+      </div>
+    </div>
+    </div>
+    <div class="popup">
+      <div class="popup-box">
+        <div class="top-bar">
+            <div class="close" ><label for="pop">&times;</label></div></div>
+        <div class="title" id="popuptitle">Application Status</div>
+        <div class="matter">
+          You have Succesfully Applied for Java Script Developer Job
+        </div>
+        <div class="bottom-bar">
+          <button class="okey">Okey</button>
+        </div>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>

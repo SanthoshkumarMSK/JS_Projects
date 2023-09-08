@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="buddylist-wrapper">
+        <table class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>Avatar</th>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>del rows</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="data in vm.buddylistData">
+                    <td><img src="user-128.png" width="35" height="35"></td>
+                    <td>{{data.firstname}}</td>
+                    <td>{{data.lastname}}</td>
+                    <td><button ng-click="vm.buddylistData.splice($index,1)" class="btn btn-danger">del</button></td>
+                </tr>
+            </tbody>
+        <!-- <tr>
+        <button ng-click="vm.addedrow=true" class="btn btn-success pull-right">Add New Row</button>
+        </tr> -->
+        </table>
+        <div class="row" ng-if="vm.addedrow" ng-init="vm.buddylist=''">
+            <div class="col-md-4 col-sm-4 buddyFirstName">
+                <label for="buddyFirstname">First Name</label>
+                <input type="text" id="buddyFirstname" class="col-md-12 col-sm-12"    ng-model="vm.buddylist.buddyFirstname" required="required" />
+            </div>
+            <div class="col-md-4 col-sm-4 buddyLastName">
+                <label for="buddyLastname">Last Name</label>
+                <input id="buddyLastname" type="text" class="col-md-12 col-sm-12"  ng-model="vm.buddylist.buddyLastname" required="required" />
+            </div>
+            <div class="completeRow pull-right">
+            <button class="btn btn-primary" ng-click="(!vm.buddylist.buddyFirstname==''&&!vm.buddylist.buddyLastname=='')?vm.buddylistData.push({'firstname':vm.buddylist.buddyFirstname,'lastname':vm.buddylist.buddyLastname}):'';vm.addedrow=(!vm.buddylist.buddyFirstname==''&&!vm.buddylist.buddyLastname=='')?false:true;(!vm.buddylist.buddyFirstname==''&&!vm.buddylist.buddyLastname=='')?vm.buddylist='':''">Finish</button>
+            </div>
+        </div>
+        <button ng-click="vm.addedrow=true" class="btn btn-success pull-right">Add New Row</button>
+        </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+.table,.table-head,.table-rows,.row{
+    display:table;               
+    background-color:#eee;         
+    border:1px solid  #666666;         
+    border-spacing:5px;
+    border-collapse: collapse;
+    margin: 10px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    padding: auto;
+  }
+  .header{
+    display:table-row;
+    float: left;
+    text-align: center; 
+    width:120px;
+    background-color:rgb(63, 148, 148);
+    font-weight: bold; 
+  }
+  .table-rows{
+    flex-direction: column;
+  }
+  .row{
+      padding: 13px 0px 13px 0px;
+      width: fit-content;
+  }
+  .row:nth-child(odd){
+      width: fit-content;
+    display:table-cell;         
+    background-color:beige;
+    width: 100px;
+    height: 40px;
+    padding: 10px;
+    text-align: center;
+   
+  }
+  .row:nth-child(even){
+      width: fit-content;
+    display:table-cell;         
+    background-color:cadetblue;
+    padding: 10px;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+  }
+  
+  

@@ -1,0 +1,56 @@
+body {
+  font-family: Arial, sans-serif;
+
+  margin: 0;
+
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+table {
+  border-collapse: collapse;
+
+  width: 100%;
+
+  border: 1px solid #ccc;
+}
+
+th,
+td {
+  padding: 8px;
+
+  text-align: left;
+
+  border-bottom: 1px solid #ccc;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+.user-list {
+  margin-top: 20px;
+}
+
+.user {
+  border: 1px solid #ccc;
+
+  padding: 10px;
+
+  margin-bottom: 5px;
+
+  display: flex;
+
+  justify-content: space-between;
+}
+
+button {
+  cursor: pointer;
+}
