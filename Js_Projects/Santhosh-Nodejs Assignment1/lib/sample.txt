@@ -1,0 +1,6 @@
+Node.js is an open-source and cross-platform runtime
+ environment for executing JavaScript code outside a browser.
+  You need to remember that NodeJS is not a framework, 
+  and it’s not a programming language. Node.js is mostly used
+   in server-side programming. In this article, we will discuss 
+   how to make a web server using node.js.
