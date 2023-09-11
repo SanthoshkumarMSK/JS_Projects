@@ -1,0 +1,5 @@
+Name|Age|Gender|City
+santhosh|25|Male|VNR
+Raghul|27|Male|VNR
+sankar|28|Male|Madurai
+Bhuvan|23|Male|Coimbatore
